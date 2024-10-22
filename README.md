@@ -1,2 +1,2 @@
-# StepInStyle-
+# StepInStyle
 FEE - II PROJECT
