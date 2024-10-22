@@ -1,5 +1,5 @@
 # StepInStyle : Shoe Website
 FEE - II PROJECT
-PROJECT GROUP - 6
+# PROJECT GROUP - 6
 
 
