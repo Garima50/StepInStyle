@@ -2,12 +2,13 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8" />
-    <title>Transparent Login & Signup Form</title>
+    <title> Login Form </title>
     <link rel="stylesheet" href="css/login.css" />
+    <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <style>
+    <!-- <style>
       /* CSS Rules for Toggling */
       .hidden {
         display: none;
@@ -37,7 +38,9 @@
       #toggle:checked ~ .bg-img .content .toggle .signup#already-account {
         display: block;
       }
-    </style>
+
+    </style> -->
+
   </head>
   <body>
 
@@ -198,85 +201,7 @@
       </div>
     </div>
 
-    <script>
-      // JavaScript only needed for password visibility toggle
-      document.addEventListener("DOMContentLoaded", function() {
-// Prevent form submission and validate login credentials
-document.getElementById('login-form').addEventListener('submit', function(event) {
-  event.preventDefault(); // Prevent form from submitting
-
-  const email = document.getElementById('email').value;
-  const password = document.getElementById('password').value;
-  const errorMessage = document.getElementById('errorMessage');
-
-  errorMessage.textContent = '';
-
-  if (!email || !password) {
-    errorMessage.textContent = 'Please enter both email and password.';
-    return;
-  }
-
-  // Store email in localStorage (simplified for demonstration, not secure)
-  localStorage.setItem('userName', email);
-  alert('Login successful! Welcome to Step in Style.');
-  window.location.href = 'Main/main.html'; // Redirect to homepage
-});
-
-// Handle signup form submission
-document.getElementById('signup-form').addEventListener('submit', function(event) {
-  // Prevent form from submitting
-
-  const username = document.querySelector('#signup-form input[type="text"]').value;
-  const email = document.querySelector('#signup-form input[type="email"]').value;
-  const password = document.querySelector('#signup-form input[type="password"]').value;
-  const errorMessage = document.getElementById('errorMessage');
-
-  errorMessage.textContent = '';
-
-
-  // Validate fields
-  if (!username || !email || !password) {
-    errorMessage.textContent = 'Please fill in all fields.';
-    return;
-  } 
-     // Redirect to homepage
-
-
-  // You can add more validation here, such as checking if the email format is correct
-
-  // Store signup information (simplified for demonstration)
-  localStorage.setItem('username', username);
-  localStorage.setItem('userEmail', email);
-  localStorage.setItem('userPassword', password); // Note: Storing passwords is not secure!
-
-  localStorage.setItem('userName', email);
-    alert('Signup successful! Welcome to Step in Style.');
-            window.location.href = 'Main/main.html';
-  
-  
-});
-
- // Toggle between login and signup forms
- document.getElementById('signup-link').addEventListener('click', function() {
-            document.getElementById('login-form').classList.add('hidden');
-            document.getElementById('signup-form').classList.remove('hidden');
-            document.getElementById('login-header').classList.add('hidden');
-            document.getElementById('signup-header').classList.remove('hidden');
-            document.getElementById('already-account').classList.remove('hidden');
-        });
-
-        document.getElementById('login-link').addEventListener('click', function() {
-            document.getElementById('signup-form').classList.add('hidden');
-            document.getElementById('login-form').classList.remove('hidden');
-            document.getElementById('signup-header').classList.add('hidden');
-            document.getElementById('login-header').classList.remove('hidden');
-            document.getElementById('already-account').classList.add('hidden');
-        });
-
-      });
-
-    </script>
-
+   
 
         <!-- footer section start -->
         <footer class="footer">
@@ -406,7 +331,7 @@ document.getElementById('signup-form').addEventListener('submit', function(event
          </div>
      </footer>
      <!-- footer copy right section end -->
-
+      <script src="js/login.js"></script>
 
 
   </body>

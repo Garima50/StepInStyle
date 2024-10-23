@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Men Running </title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="Prodcardall.css">
+    <link rel="stylesheet" href="css/Prodcardall.css">
+    <link rel="stylesheet" href="css/header.css">
 
     <style>
         /* Sorting button */
@@ -384,6 +385,15 @@
                                                
                       </a>
                     </li>
+
+                    <li>
+                      <a id="themeToggle" class="s-link" href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="27">
+                          <path fill="none" d="M0 0h32v32H0z"/>
+                          <path fill="black" d="M12.516,4.509A12,12,0,0,0,22.3,19.881,12.317,12.317,0,0,0,24,20a11.984,11.984,0,0,0,3.49-.514,12.1,12.1,0,0,1-9.963,8.421A12.679,12.679,0,0,1,16,28,12,12,0,0,1,12.516,4.509M16,0a16.5,16.5,0,0,0-2.212.15A16,16,0,0,0,16,32a16.526,16.526,0,0,0,2.01-.123A16.04,16.04,0,0,0,31.85,18.212,16.516,16.516,0,0,0,32,15.944,1.957,1.957,0,0,0,30,14a2.046,2.046,0,0,0-1.23.413A7.942,7.942,0,0,1,24,16a8.35,8.35,0,0,1-1.15-.08,7.995,7.995,0,0,1-5.264-12.7A2.064,2.064,0,0,0,16.056,0Z"/>
+                      </svg>                      
+                    </a>
+                  </li>
                     </ul>
                     </div>
                   </div>
@@ -396,124 +406,8 @@
         </footer>
           <!-- footer copy right section end -->
 
-          
-          <script>
-            // Get the modal
-            // Get the modal
-        var modal = document.getElementById('productModel');
-        
-        // Get the button that opens the modal (add a class or ID to the button you use to open it)
-        var button = document.getElementById('sortBtn');
-        
-        // Get the <span> element that closes the modal
-        var span = document.getElementsByClassName('close')[0];
-        
-        // Open the modal when the button is clicked
-          button.addEventListener('click', function() {
-            modal.style.display = 'block';
-          });
-        
-        // Close the modal when the <span> (x) is clicked
-        span.onclick = function() {
-          modal.style.display = 'none';
-        }
-        
-        // Close the modal if the user clicks anywhere outside the modal
-        window.onclick = function(event) {
-          if (event.target == modal) {
-            modal.style.display = 'none';
-          }
-        }
-        
-        // Sorting Logic
-        document.querySelectorAll('input[name="price"]').forEach(function(priceRadio) {
-          priceRadio.addEventListener('change', applyFilters);
-        });
-        
-        document.querySelectorAll('input[name="color"]').forEach(function(colorCheckbox) {
-          colorCheckbox.addEventListener('change', applyFilters);
-        });
-        
-        document.querySelectorAll('input[name="material"]').forEach(function(materialCheckbox) {
-          materialCheckbox.addEventListener('change', applyFilters);
-        });
-        
-        function applyFilters() {
-          var selectedPrice = document.querySelector('input[name="price"]:checked') ? 
-                              document.querySelector('input[name="price"]:checked').value : null;
-          var selectedColors = Array.from(document.querySelectorAll('input[name="color"]:checked')).map(el => el.value);
-          var selectedMaterials = Array.from(document.querySelectorAll('input[name="material"]:checked')).map(el => el.value);
-        
-          var products = Array.from(document.querySelectorAll('.col-4')); // Convert NodeList to Array
-          
-          // Filter by color and material
-          products.forEach(function(product) {
-            var productColor = product.getAttribute('data-color');
-            var productMaterial = product.getAttribute('data-material');
-        
-            // Default show product
-            var showProduct = true;
-        
-            // Filter by color
-            if (selectedColors.length > 0 && !selectedColors.includes(productColor)) {
-              showProduct = false;
-            }
-        
-            // Filter by material
-            if (selectedMaterials.length > 0 && !selectedMaterials.includes(productMaterial)) {
-              showProduct = false;
-            }
-        
-            // Apply filter to product visibility
-            product.style.display = showProduct ? 'block' : 'none';
-          });
-        
-          // Now handle the sorting logic
-          if (selectedPrice) {
-            products.sort(function(a, b) {
-              var priceA = parseInt(a.getAttribute('data-price'));
-              var priceB = parseInt(b.getAttribute('data-price'));
-        
-              if (selectedPrice === 'low-high') {
-                return priceA - priceB; // Sort low to high
-              } else if (selectedPrice === 'high-low') {
-                return priceB - priceA; // Sort high to low
-              }
-            });
-        
-            // Append the sorted products back to the container
-            var productContainer = document.getElementById('productContainer');
-            productContainer.innerHTML = ''; // Clear existing products
-            products.forEach(function(product) {
-              productContainer.appendChild(product); // Append each sorted product
-            });
-          }
-        }
-          function removeSorting() {
-          // Clear all radio buttons and checkboxes
-          document.querySelectorAll('input[name="price"]').forEach(function(radio) {
-            radio.checked = false;
-          });
-          document.querySelectorAll('input[name="color"]').forEach(function(checkbox) {
-            checkbox.checked = false;
-          });
-          document.querySelectorAll('input[name="material"]').forEach(function(checkbox) {
-            checkbox.checked = false;
-          });
-        
-          // Show all products
-          var products = document.querySelectorAll('.col-4');
-          products.forEach(function(product) {
-            product.style.display = 'block'; // Reset display to block for all products
-          });
-        }
-        
-        
-        
-          </script>
-  
-  
-  
+          <script defer src="js/theme.js"></script>
+          <script src="js/Prodcard.js"></script>
   
 
   </body>
