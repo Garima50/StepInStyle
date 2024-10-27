@@ -10,7 +10,7 @@
   --bermuda: #77d7b9;
   --white: #fff;
   --black: #000;
-  --cream: rgba(250, 236, 233, 0.7);
+  --cream: rgba(250, 230, 230, 0.9);
   --peach: rgba(250, 220, 213, 0.8);
   --darkpeach: rgba(252, 189, 173, 0.9);
   --open-sans: 'Open Sans', sans-serif;
@@ -32,7 +32,7 @@
 }
 
 body {
-  background-image: linear-gradient(to right, var(--cream), var(--peach), var(--darkpeach));
+  background-color: rgb(242, 242, 242);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   height: 100vh;
@@ -311,7 +311,7 @@ a {
 /* === HEADING STYLE #1 === */
 .nine p {
   text-align:center; font-size: 88px;  color: rgb(49, 6, 6); letter-spacing:1.2px;
-  font-family:'Great Vibes', cursive; font-weight:400; margin-top: 110px;
+  font-family:'Great Vibes', cursive; font-weight:400; margin-top: 70px;
   margin-bottom: 0%;
 
 }
