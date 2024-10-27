@@ -68,61 +68,73 @@ header {
   
 }
 
+
+/* Header Styling Adjustments */
 .navli .drop {
-  position: relative;
+  text-decoration: none;
+  color: #000;
+  font-size: 1.1em;
+  font-weight: bold;
+  letter-spacing: 2.5px; /* Pre-define letter-spacing */
+  padding-bottom: 3px; /* Add padding to accommodate border */
+  border-bottom: 4px solid transparent; /* Transparent border to prevent movement */
+  transition: border-bottom 150ms ease-in-out;
+  transition: visibility, opacity 0.4s ease-in-out;
+  cursor: pointer;
 }
 
-.navli .dropdown {
-  opacity: 0; 
-  visibility: hidden; 
+.navli .drop:hover {
+  border-bottom: 4px solid #696969; /* Bottom border on hover */
+}
+
+/* Dropdown Styling */
+.navli .drop .dropdown {
+  height: 80px;
+  opacity: 0;
+  visibility: hidden;
   position: absolute;
-  background-color: white;
-  list-style-type: none;
-  padding: 14px 0px 10px 0px;
-  margin: 0;
+  background-color: rgba(248, 248, 248, 0.9); 
+  padding: 4%;
   z-index: 8;
   top: 100%;
-  margin-top: 5px;
-  min-width: 200px;
-  transition: opacity 0.5s ease, visibility 0.5s ease;
-  
-}
-.navli .dropdown li {
-  padding: 8px 16px;
-  letter-spacing: 0;
+  left: 0;
+  width: 100vw; 
+  display: flex;
+  align-items: center;
+  transition: opacity 0.4s ease-in-out, visibility 0.4s ease-in-out;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); 
 }
 
-.navli .dropdown hr {
-  border: none;
-  border-top: 1.7px solid #eaeaea;
-  margin: 7px 0;
+.navli .drop .dropdown .inside {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90vw;
+}
+.navli .dropdown li {
+  list-style-type: none;
+  padding: 1% 0 1% 1%;
+  margin: 2%; 
+  font-size: 1em;
+  font-family: 'Roboto', sans-serif;
 }
 
 .navli .dropdown li a {
   text-decoration: none;
-  color: rgb(68, 68, 68);
-  display: block;
-  font-size: 0.9em;
-  font-family: 'Roboto', sans-serif;
+  color: rgb(43, 43, 43);
   font-weight: normal;
+  transition: color 0.3s ease, text-decoration 0.3s ease;
 }
 
-.navli .dropdown li a:hover {
-  text-decoration: underline;
+.navli .dropdown li:hover a {
   color: #7d7d7d;
+  text-decoration: underline;
 }
 
-/* Display the dropdown on hover */
-.navli .drop:hover .dropdown,
-.navli li:hover .dropdown,
-.navli li:focus-within .dropdown,
-.navli li .dropdown:hover {
-  opacity: 1; /* Fade in the dropdown */
+/* Show dropdown on hover */
+.navli .drop:hover .dropdown {
+  opacity: 1;
   visibility: visible;
-}
-.navli li  {
-  background: none;
-  border: none;
 }
 
 nav .navli {
@@ -132,32 +144,7 @@ nav .navli {
     display: flex;
     gap: 45px;
 }
-nav .navli .drop {
-    text-decoration: none;
-    color: #000;
-    font-size: 1.1em;
-    font-weight: bold;
-    letter-spacing: 0;
-    padding: 3px;
-    border: 2px solid white;
-    transition: all 280ms ease-in-out;
-    transition: letter-spacing 350ms ease-in-out;
-    transition: .4s;
-    cursor: pointer;
-    
-    
 
-}
-
-nav .navli .drop:hover,
-nav .navli .drop:active,
-.user-options .log:hover,
-.user-options .log:active {
-  backface-visibility: hidden;
-  border-top-color: #696969;
-  border-bottom-color: #696969;
-  letter-spacing: 5px;
-}
 
 .user-options .log {
   margin-top: 5.5px;
@@ -352,8 +339,6 @@ nav .navli .drop:active,
   from {opacity: .4}
   to {opacity: 1}
 }
-
-
 
 
 
@@ -653,4 +638,47 @@ svg {
 
 a {
   text-decoration: none;
+}
+
+/* 
+.more1 {
+  position: relative;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.video1 {
+  
+  width: 100vw;
+  height: 100vw;
+  object-fit: cover; 
+  
+} */
+
+/* .video-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+*/
+
+.more1 {
+  position: relative;
+  width: 97.5vw; 
+  height: 95vh; 
+  overflow: hidden;
+} 
+/* Video Styling */
+.video1 {
+  
+    bottom: 0;
+    margin-left: 1.7%;
+    margin-right: 1%;
+    min-width: 100%;
+    min-height: 100%;
+  /* Scale video to cover section without stretching */
+  
 }

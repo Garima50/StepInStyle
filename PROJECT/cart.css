@@ -179,14 +179,14 @@ Side note: I know that this style of nesting in SASS doesn't result in the most 
   .product .remove-product {
     border: 0;
     padding: 4px 8px;
-    background-color: #c66;
+    background-color: rgb(88, 88, 88);
     color: #fff;
     font-family: "HelveticaNeue-Medium", "Helvetica Neue Medium";
     font-size: 12px;
     border-radius: 3px;
   }
   .product .remove-product:hover {
-    background-color: #a44;
+    background-color: rgb(66, 66, 66);
   }
   
   /* Totals section */
@@ -207,23 +207,23 @@ Side note: I know that this style of nesting in SASS doesn't result in the most 
     width: 21%;
     text-align: right;
   }
-  .totals .totals-item-total {
+  /* .totals .totals-item-total {
     font-family: "HelveticaNeue-Medium", "Helvetica Neue Medium";
-  }
+  } */
   
   .checkout {
     float: right;
     border: 0;
     margin-top: 20px;
     padding: 6px 25px;
-    background-color: #6b6;
+    background-color: rgb(0, 0, 0);
     color: #fff;
     font-size: 25px;
     border-radius: 3px;
   }
   
   .checkout:hover {
-    background-color: #494;
+    background-color: rgb(89, 89, 89);
   }
   
   /* Make adjustments for tablet */
@@ -376,4 +376,271 @@ Side note: I know that this style of nesting in SASS doesn't result in the most 
   
   .payment-options {
     margin-top: 20px;
+}
+
+
+
+
+/* header starts */
+header {
+  font-family: Arial, sans-serif;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  position: fixed;
+  padding: 0px;
+}
+
+.topdiv {
+align-items: center;
+justify-content: space-between;
+background-color: rgb(30, 30, 30);
+padding: 1.5px 8px 1.5px 8px;
+text-align: center;
+position: sticky;
+}
+.topdiv .pol {
+color: #ffffff;
+font-size: 0.69em;
+font-weight: bold;
+text-align: center;
+}
+.topdiv a {
+text-decoration: none;
+}
+
+.container {
+  max-width: 1450px;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 40px 0px 40px;
+  background-color: rgb(242, 242, 242); 
+
+}
+
+.logo h1 {
+  font-size: 2.1em;
+  font-weight: lighter;
+  margin: 0;
+  font-family: Cookie;
+  font-style: italic;
+}
+.logo a{
+color: #000;
+text-decoration: none;
+
+}
+
+
+/* Header Styling Adjustments */
+.navli .drop {
+text-decoration: none;
+color: #000;
+font-size: 1.1em;
+font-weight: bold;
+letter-spacing: 2.5px; /* Pre-define letter-spacing */
+padding-bottom: 3px; /* Add padding to accommodate border */
+border-bottom: 4px solid transparent; /* Transparent border to prevent movement */
+transition: border-bottom 150ms ease-in-out;
+transition: visibility, opacity 0.4s ease-in-out;
+cursor: pointer;
+}
+
+.navli .drop:hover {
+border-bottom: 4px solid #696969; /* Bottom border on hover */
+}
+
+/* Dropdown Styling */
+.navli .drop .dropdown {
+height: 80px;
+opacity: 0;
+visibility: hidden;
+position: absolute;
+background-color: rgba(248, 248, 248, 0.96); 
+padding: 4%;
+z-index: 8;
+top: 100%;
+left: 0;
+width: 100vw; 
+display: flex;
+align-items: center;
+transition: opacity 0.4s ease-in-out, visibility 0.4s ease-in-out;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); 
+}
+
+.navli .drop .dropdown .inside {
+display: flex;
+justify-content: center;
+align-items: center;
+width: 90vw;
+}
+.navli .dropdown li {
+list-style-type: none;
+padding: 1% 0 1% 1%;
+margin: 2%; 
+font-size: 1em;
+font-family: 'Roboto', sans-serif;
+}
+
+.navli .dropdown li a {
+text-decoration: none;
+color: rgb(43, 43, 43);
+font-weight: normal;
+transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+.navli .dropdown li:hover a {
+color: #7d7d7d;
+text-decoration: underline;
+}
+
+/* Show dropdown on hover */
+.navli .drop:hover .dropdown {
+opacity: 1;
+visibility: visible;
+}
+
+nav .navli {
+  list-style-type: none;
+  margin-top: 18px;
+  padding: 0;
+  display: flex;
+  gap: 45px;
+}
+
+
+.user-options .log {
+margin-top: 5.5px;
+font-size: 1.1em;
+letter-spacing: 0;
+padding: 3px 0 3px 0;
+border: 2px solid transparent;
+transition: all 280ms ease-in-out;
+transition: letter-spacing 350ms ease-in-out;
+transition: .4s;
+}
+
+.search-user {
+  display: flex;
+  align-items: right;
+  gap: 10px;
+}
+
+.search-user input {
+  padding: 5px 10px;
+  font-size: 0.8em;
+  border: 0.7px solid rgba(238, 238, 238, 0.7);
+  border-radius: 16px;
+  width: 200px;
+  height: 19px;
+  background-color: rgba(203, 203, 203, 0.4);
+}
+.search-user input:hover {
+border: 1.2px solid rgb(45, 45, 45);
+background-color: rgba(220, 220, 220, 0.6);;
+}
+
+.user-options {
+  display: flex;
+  gap: 22px;
+}
+
+.user-options .wishlist {
+margin-top: 7px; 
+font-size:22px; 
+color:black;
+transition: font-size 0.2s ease-in;
+}
+.user-options .wishlist:hover {
+font-size: 24px;
+}
+.user-options a {
+  text-decoration: none;
+  color: #000;
+  font-size: 1.1em;
+  font-weight: bold;
+}
+
+.user-options .shop {
+width: 23px;
+height: 23px;
+margin-top: 7px;
+transition: width 0.2s ease-in, height 0.2s ease-in;
+}
+.user-options .shop:hover {
+width: 25px;
+height: 25px;
+}
+
+/* Header ends */ 
+
+
+/* Responsive Adjustments */
+@media (max-width: 1200px) {
+.header-content {
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.user-options {
+    margin-top: 15px;
+}
+}
+
+@media (max-width: 992px) {
+.header-content {
+    padding: 0 10px;
+}
+
+.navli {
+    flex-direction: column;
+}
+
+.navli .nav-item {
+    margin-bottom: 10px;
+}
+
+.product-container {
+    flex-direction: column;
+}
+}
+
+@media (max-width: 768px) {
+.product-images img#productImg {
+    padding: 20px 0;
+}
+
+.product-details .p1 {
+    font-size: 22px;
+}
+
+.product-details .p2 {
+    font-size: 15px;
+}
+}
+
+@media (max-width: 576px) {
+.topdiv {
+    font-size: 0.6em;
+}
+
+.header-content {
+    padding: 0 5px;
+}
+
+.logo h1 {
+    font-size: 1.8em;
+}
+
+.user-options .wishlist,
+.user-options .shop {
+    font-size: 20px;
+}
+
+.product-images img#productImg {
+    padding: 10px 0;
+}
 }

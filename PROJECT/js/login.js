@@ -19,7 +19,7 @@ return;
 // Store email in localStorage (simplified for demonstration, not secure)
 localStorage.setItem('userName', email);
 alert('Login successful! Welcome to Step in Style.');
-window.location.href = 'Main/main.html'; // Redirect to homepage
+window.location.href = 'main.html'; // Redirect to homepage
 });
 
 // Handle signup form submission
@@ -52,7 +52,7 @@ localStorage.setItem('userPassword', password); // Note: Storing passwords is no
 
 localStorage.setItem('userName', email);
 alert('Signup successful! Welcome to Step in Style.');
-      window.location.href = 'Main/main.html';
+      window.location.href = 'main.html';
 
 
 });

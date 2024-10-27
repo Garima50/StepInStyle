@@ -319,7 +319,8 @@ a {
 
 
 /* header starts */
-header {
+
+/* header {
   font-family: Arial, sans-serif;
   width: 100%;
   top: 0;
@@ -415,12 +416,11 @@ text-decoration: underline;
 color: #7d7d7d;
 }
 
-/* Display the dropdown on hover */
 .navli .drop:hover .dropdown,
 .navli li:hover .dropdown,
 .navli li:focus-within .dropdown,
 .navli li .dropdown:hover {
-opacity: 1; /* Fade in the dropdown */
+opacity: 1; 
 visibility: visible;
 }
 .navli li  {
@@ -527,7 +527,7 @@ transition: width 0.2s ease-in, height 0.2s ease-in;
 .user-options .shop:hover {
 width: 25px;
 height: 25px;
-}
+} */
 
 /* Header ends */ 
 

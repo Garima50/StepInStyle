@@ -27,48 +27,58 @@
                       <h1> <a href="main.html" class="main"> StepInStyle </a> </h1>
                   </div>
                   <nav>
-                      <ul class="navli">
-                          <li class="drop">  WOMAN 
-                          
-                            <ul class="dropdown">
-                              <li><a href="Prodcardw.html">All Shoes</a></li> <hr>
-                              <li><a href="cardrunw.html">Running</a></li> <hr>
-                              <li><a href="cardsneaw.html">Sneakers</a></li> <hr>
-                              <li><a href="#">Slides and Sandals</a></li> <hr>
-                              <li><a href="#">Pumps</a></li> <hr>
-                              <li><a href="#">Block Heels</a></li> <hr>
-                              <li><a href="#">Bridal</a></li> <hr>
-                           </ul>
-                          
-                          </li>
+                    <ul class="navli">
+                      <li class="drop">  WOMAN 
+                      
+                        <ul class="dropdown one">
+                          <div class="inside">
+                          <li><a href="Prodcardw.html">All Shoes</a></li> 
+                          <li><a href="cardrunw.html">Running</a></li> 
+                          <li><a href="cardsneaw.html">Sneakers</a></li> 
+                          <li><a href="cardsandw.html">Slides & Sandals</a></li> 
+                          <li><a href="cardpumw.html">Pumps</a></li>
+                          <li><a href="cardblow.html">Block Heels</a></li> 
+                          <li><a href="cardbridew.html">Bridal</a></li> 
+                        </div>
+                       </ul>
+                      
+                      </li>
+  
+                      <li class="drop">  MAN 
+  
+                        <ul class="dropdown two">
+                          <div class="inside">
+                          <li><a href="Prodcardm.html">All Shoes</a></li> 
+                          <li><a href="cardrunm.html">Running</a></li> 
+                          <li><a href="cardsneam.html">Sneakers</a></li> 
+                          <li><a href="cardformm.html">Formals</a></li> 
+                        </div>
+                       </ul>
+                      
+                      </li>
       
-                          <li class="drop">  MAN 
+                      <li class="drop"> KIDS 
       
-                            <ul class="dropdown">
-                              <li><a href="Prodcardm.html">All Shoes</a></li> <hr>
-                              <li><a href="cardrunm.html">Running</a></li> <hr>
-                              <li><a href="cardsneam.html">Sneakers</a></li> <hr>
-                           </ul>
-                          
-                          </li>
+                        <ul class="dropdown three">
+                          <div class="inside">
+                          <li><a href="Prodcardk.html">All Shoes</a></li> 
+                          <li><a href="cardrunk.html">Running</a></li> 
+                          <li><a href="cardsneak.html">Sneakers</a></li> 
+                          </div>
+                       </ul>
       
-                          <li class="drop"> KIDS 
+                      </li>
       
-                            <ul class="dropdown">
-                              <li><a href="Prodcardk.html">All Shoes</a></li> <hr>
-                              <li><a href="#">Running</a></li> <hr>
-                              <li><a href="#">Sneakers</a></li> <hr>
-                           </ul>
+                      <li class="drop"> TRENDS 
       
-                          </li>
-      
-                          <li class="drop"> TRENDS 
-      
-                            <ul class="dropdown">
-                              <li><a href="#">All Shoes</a></li> <hr>
-                              <li><a href="#">Shoes</a></li> <hr>
-                              <li><a href="#">Accessories</a></li> <hr>
-                           </ul>
+                        <ul class="dropdown four">
+                          <div class="inside">
+                          <li><a href="cardtrend.html">All Trends</a></li> 
+                          <li><a href="cardweek.html">This Week</a></li>
+                          <li><a href="cardmonth.html">This Month</a></li> 
+                          <li><a href="cardspecial.html">This Month</a></li> 
+                          </div>
+                       </ul>
       
                           </li>
       
@@ -81,7 +91,7 @@
                       <div class="user-options">
                          <a href="login.html" class="log"> LOG IN </a> 
                           <a href="#" class="wishlist"> <i class="fa fa-heart-o"></i> </a>
-                          <a href="#"> <img src="Imagess/shopping-bag.png" class="shop"> </a>
+                          <a href="cart.html"> <img src="Imagess/shopping-bag.png" class="shop"> </a>
                       </div>
                  
               </div>
@@ -343,17 +353,6 @@
             <p class="mrp"> MRP: ₹ 71 817.00 </p>
         </div>
 
-          <!-- <div class="col-4">
-              <a href="prod15.html">
-                  <img src="Imagess/Jc/p15jc1.webp" class="nail">
-                  <p class="brand"> JIMMY CHOO </p>
-              <h4 class="shoename"> Val 70 </h4> 
-              <p class="gen"> Metallic Snake Printed Leather Mule Sandals </p> 
-          </a>
-           
-              <p class="mrp"> MRP: ₹ 58 000.00 </p>
-          </div>   -->
-
           <div class="col-4">
               <a href="prod16.html">
                   <img src="Imagess/Eridani/p16erd1.webp" class="nail">
@@ -557,89 +556,7 @@
           <!-- footer copy right section end -->
           <script defer src="js/theme.js"></script>
         
-        
-        <!-----------------------------------js for toggle menu----------------------------------------------->
-        <script>
-            var menuItems=document.getElementById("MenuItems");
-            
-            MenuItems.style.maxHeight="0px";
-            function menutoggle(){
-                if(MenuItems.style.maxHeight == "0px"){
-                    MenuItems.style.maxHeight="200px";
-                }
-                else{
-                    MenuItems.style.maxHeight="0px";
-                }
-            }
-        </script>
-        
-        <!-----------------------js for product gallery-------------------->
-        
-        <script>
-            var productImg=document.getElementById("productImg");
-            var smallImg=document.getElementsByClassName("small-img");
-            
-            smallImg[0].onclick=function(){
-                productImg.src=smallImg[0].src;
-            }
-             smallImg[1].onclick=function(){
-                productImg.src=smallImg[1].src;
-            }
-              smallImg[2].onclick=function(){
-                productImg.src=smallImg[2].src;
-            }
-               smallImg[3].onclick=function(){
-                productImg.src=smallImg[3].src;
-            }
-
-            smallImg[4].onclick=function(){
-                productImg.src=smallImg[4].src;
-            }
-
-            smallImg[5].onclick=function(){
-                productImg.src=smallImg[5].src;
-            }
-
-            smallImg[6].onclick=function(){
-                productImg.src=smallImg[6].src;
-            }
-            
-            smallImg[7].onclick=function(){
-                productImg.src=smallImg[7].src;
-            }
-            
-            
-        </script>
-
-
-
-<script>
-    // Get the modal
-    var modal = document.getElementById("productModal");
-    
-    // Get the button that opens the modal
-    var btn = document.getElementById("openModalBtn");
-    
-    // Get the <span> element that closes the modal
-    var span = document.getElementsByClassName("close")[0];
-    
-    // When the user clicks the button, open the modal 
-    btn.onclick = function() {
-      modal.style.display = "block";
-    }
-    
-    // When the user clicks on <span> (x), close the modal
-    span.onclick = function() {
-      modal.style.display = "none";
-    }
-    
-    // When the user clicks anywhere outside of the modal, close it
-    window.onclick = function(event) {
-      if (event.target == modal) {
-        modal.style.display = "none";
-      }
-    }
-    </script>
+          <script src="js/product.js"></script>
     
 
 
