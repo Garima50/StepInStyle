@@ -361,7 +361,7 @@ Side note: I know that this style of nesting in SASS doesn't result in the most 
   }
 
 /* Loader styles */
-.loader {
+.loader1 {
     background-color: black;
     border: 8px solid #f3f3f3; /* Light grey background */
     border-top: 8px solid #3498db; /* Blue colored top border for spinner effect */
