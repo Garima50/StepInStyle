@@ -348,12 +348,16 @@ Side note: I know that this style of nesting in SASS doesn't result in the most 
   }
   
   #continue-button {
-    background-color: #4CAF50;
+    background-color: #000000;
     color: white;
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+  }
+
+  #continue-button:hover {
+    background-color: rgb(66, 66, 66);
   }
 
 /* Loader styles */
