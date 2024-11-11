@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client'; // Import from 'react-dom/client' in React 18
-import './main.css';
 import App from './App';
 
 // Create a root element to render the app
